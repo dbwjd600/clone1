@@ -179,11 +179,12 @@ main .section1{
     overflow:hidden;
     position: relative;
     .video{
-        overflow: hidden;
+        .bn{overflow: hidden;}
+        
         video{
             width: auto;
             height: 100vh;
-            transform: translateX(-100px);
+            transform: translateX(-40%);
         }
     }
     .s1-c1{

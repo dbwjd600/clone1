@@ -281,15 +281,15 @@ main .section1 {
   position: relative;
 }
 
-main .section1 .video {
+main .section1 .video .bn {
   overflow: hidden;
 }
 
 main .section1 .video video {
   width: auto;
   height: 100vh;
-  -webkit-transform: translateX(-100px);
-          transform: translateX(-100px);
+  -webkit-transform: translateX(-40%);
+          transform: translateX(-40%);
 }
 
 main .section1 .s1-c1 {
