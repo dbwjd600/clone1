@@ -1,7 +1,7 @@
 
 function init(){
 
-    // header
+    //  header 
     let headH = $('header').height();
     
     $(window).on('scroll',function(){
@@ -20,7 +20,7 @@ function init(){
         
     });
 
-    // video1
+    //  slide_video
     let data;
     $.ajax({
         url:'./js/data.json',
@@ -28,11 +28,17 @@ function init(){
             
             let elData = '';
 
-            $.each(data.video1,function(k,v){
+            $.each(data.video,function(k,v){
 
-                elData += `<div><video autoplay muted controls loop
-                poster="./img/Dir-Park.png"><source src="${data.video1[k]}" type="video/mp4"></video></div>`
+                elData += `<div class="bn">
+                            <video autoplay muted controls loop
+                            poster="./img/Dir-Park.png"><source src="${data.video[k].url}" type="video/mp4"></video>
 
+                            <div class="txt">
+                                <h2>${data.video[k].tit}</h2>
+                                <p>${data.video[k].ja}</p>
+                            </div>
+                            </div>`;
             });
 
             $('.video').html(elData);
@@ -42,10 +48,14 @@ function init(){
                 slidesToShow: 1,
                 slidesToScroll: 1
             });
+
+            // $('.slide').on('afterChange', function(e,c){
+            //     console.log(c.currentSlide);
+            // });
         }
     });
 
-    
+    //  scroll_animation
     $(window).on('scroll',function(){
         scrollTop = $(window).scrollTop();
         let C1 = $('.s2-c1').offset().top;
@@ -68,9 +78,15 @@ function init(){
             $('.section5 > a> div').addClass('active');
         }
         
-        console.log('scroll')
     });
 
+    //  burger menu
+    $('header .burger span').on('click',function(){
+
+        $('.menu').addClass('active')
+        $('header').addClass('active')
+        $('header h1 > img').attr('src',"./img/logo-vac-nav-bk.png");
+    })
 }
 
 $(window).on('load',init);

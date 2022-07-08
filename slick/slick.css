@@ -24,8 +24,14 @@
     margin:0; 
     width:100%;
     float:left;
+    position: relative;
 }
 .slide .slick-slide  img{width:100%;}
+.slide .slick-slide .txt{
+    position: absolute;
+    left: 5%; bottom: 20%;
+    color: #fff;
+}
 
 /* next prev */           
 .slide .slick-prev{
@@ -73,7 +79,7 @@
     margin-right:22px;
 }
 .slide .slick-dots li button{
-    height: 6px; width: 6px;
+    height: 6.5px; width: 6.5px;
     background-color: rgb(146, 146, 146);
     border-radius: 100%;
     display: inline-block;

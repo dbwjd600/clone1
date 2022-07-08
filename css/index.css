@@ -84,6 +84,9 @@ header div div .burger {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  width: 30px;
+  height: 21px;
+  position: relative;
 }
 
 header div div .burger span {
@@ -94,10 +97,47 @@ header div div .burger span {
   display: block;
   text-align: right;
   z-index: 999;
+  position: absolute;
+  left: 0;
+}
+
+header div div .burger span:nth-of-type(1) {
+  top: 0%;
+  width: 30px;
+  background-color: white;
 }
 
 header div div .burger span:nth-of-type(2) {
+  top: 30%;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  background-color: white;
+}
+
+header div div .burger span:nth-of-type(3) {
+  bottom: 0%;
   width: 30px;
+  background-color: white;
+}
+
+header div div:hover > span:nth-child(1) {
+  top: 40%;
+  -webkit-transform: translateY(-50%) rotate(45deg);
+          transform: translateY(-50%) rotate(45deg);
+}
+
+header div div:hover > span:nth-child(2) {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  opacity: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+header div div:hover > span:nth-child(3) {
+  bottom: 40%;
+  -webkit-transform: translateY(50%) rotate(-45deg);
+          transform: translateY(50%) rotate(-45deg);
 }
 
 header.active {
@@ -107,6 +147,126 @@ header.active {
 header.active span {
   background-color: #000 !important;
   z-index: 999;
+}
+
+header.active:hover > span:nth-child(1) {
+  top: 40%;
+  -webkit-transform: translateY(-50%) rotate(45deg);
+          transform: translateY(-50%) rotate(45deg);
+}
+
+header.active:hover > span:nth-child(2) {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  opacity: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+header.active:hover > span:nth-child(3) {
+  bottom: 40%;
+  -webkit-transform: translateY(50%) rotate(-45deg);
+          transform: translateY(50%) rotate(-45deg);
+}
+
+.menu {
+  background-color: #fff;
+  padding-top: 20%;
+  font-size: 24px;
+  padding-left: 6%;
+  height: 100vh;
+  display: none;
+}
+
+.menu.active {
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #fff;
+  width: 100%;
+  z-index: 9999;
+  -webkit-animation: ani-6 1s linear forwards;
+          animation: ani-6 1s linear forwards;
+  height: 100%;
+  overflow: auto;
+}
+
+@-webkit-keyframes ani-6 {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+    border-radius: 100%;
+  }
+  50% {
+    -webkit-transform: translateY(30%);
+            transform: translateY(30%);
+    border-radius: 50%;
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    border-radius: 0%;
+  }
+}
+
+@keyframes ani-6 {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+    border-radius: 100%;
+  }
+  50% {
+    -webkit-transform: translateY(30%);
+            transform: translateY(30%);
+    border-radius: 50%;
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    border-radius: 0%;
+  }
+}
+
+.menu a {
+  color: #000;
+  font-weight: 800;
+  display: block;
+  margin-bottom: 5%;
+}
+
+.menu ul li a {
+  color: #888888;
+}
+
+.menu ul li:nth-of-type(4) {
+  font-size: 20px;
+}
+
+.menu ul li:nth-of-type(5) {
+  font-size: 20px;
+}
+
+.menu div {
+  margin: 10% 0 20%;
+  font-size: 14px;
+  white-space: pre-line;
+}
+
+.menu div p {
+  line-height: 1.8rem;
+}
+
+.menu div p span {
+  color: #888888;
+}
+
+.menu div p:nth-child(2) span {
+  font-size: 10px;
+}
+
+.menu div a {
+  color: #888888;
 }
 
 main > div {
@@ -122,13 +282,14 @@ main .section1 {
 }
 
 main .section1 .video {
-  width: 100%;
   overflow: hidden;
 }
 
 main .section1 .video video {
   width: auto;
   height: 100vh;
+  -webkit-transform: translateX(-100px);
+          transform: translateX(-100px);
 }
 
 main .section1 .s1-c1 {
@@ -177,8 +338,8 @@ main .section1 .arrow {
 
 main .section1 .arrow .dot a {
   display: inline-block;
-  width: 5px;
-  height: 5px;
+  width: 5.5px;
+  height: 5.5px;
   background-color: #ddd;
   border-radius: 100%;
   z-index: 99;
@@ -494,8 +655,8 @@ main .section2 .s2-c2 ul li a {
 }
 
 main .section2 .s2-c2 ul li a.active {
-  -webkit-animation: ani-2 2s forwards;
-          animation: ani-2 2s forwards;
+  -webkit-animation: ani-2 1.5s forwards;
+          animation: ani-2 1.5s forwards;
 }
 
 main .section2 .s2-c2 ul li a img {
@@ -515,8 +676,8 @@ main .section2 .s2-c2 ul li p {
 }
 
 main .section2 .s2-c2 ul li p.active {
-  -webkit-animation: ani-3 2s forwards;
-          animation: ani-3 2s forwards;
+  -webkit-animation: ani-3 1.5s forwards;
+          animation: ani-3 1.5s forwards;
 }
 
 main .section2 .s2-c3 h2 {
@@ -606,8 +767,8 @@ main .section3 .s3-bg {
 }
 
 main .section3 .s3-bg.active {
-  -webkit-animation: shine 2s forwards;
-          animation: shine 2s forwards;
+  -webkit-animation: shine 1s forwards;
+          animation: shine 1s forwards;
 }
 
 main .section3 .s3-bg div {
