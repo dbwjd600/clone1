@@ -1,0 +1,86 @@
+.slide{
+    /* width:500px;
+    margin:100px auto; */
+
+    /* 고정값 */
+    position: relative;            
+    /* 배너, 버튼, 인디게이터 모든 요소들의 최상위 부모 */
+}
+.slide .slick-list{  
+    /* 배너들의 상위요소 */
+    overflow:hidden;  
+}
+.slide .slick-track .s1-c1 div{
+    /* 배너 그룹 및 translateX값으로 이동(스크립트) */
+    transform: translate(90%,-60%);
+}
+.slide .slick-track::after{
+   content:'';
+   display:block;
+   clear: both;
+}
+.slide .slick-slide{
+    /* 개별 배너 */
+    margin:0; 
+    width:100%;
+    float:left;
+}
+.slide .slick-slide  img{width:100%;}
+
+/* next prev */           
+.slide .slick-prev{
+    position: absolute;
+    left:4%; bottom:14%;
+    z-index: 2;
+    
+    border: none;
+    background-color: rgba(255,255,255,0);
+    font-size: 0px;
+
+    display: inline-block;
+    border-style: solid;
+    border-color: transparent #ddd transparent transparent ;
+    border-width: 5px 9px 5px 0;
+    margin-right:170%;
+}
+.slide .slick-next{
+    position: absolute;
+    left:19%; bottom:14%;
+    z-index: 2;
+
+    border: none;
+    background-color: rgba(255,255,255,0);
+    font-size: 0px;
+
+    display: inline-block;
+    border-style: solid;
+    border-color: transparent transparent transparent #ddd;
+    border-width: 5px 0 5px 9px;
+}
+
+/* dots */
+.slide .slick-dots{
+    position: absolute;
+    left:40%; bottom: 14%;
+    text-align: center;
+
+    list-style-type: none;
+    padding:0;
+    margin: 0;
+}
+.slide .slick-dots li{
+    display: inline-block;
+    margin-right:22px;
+}
+.slide .slick-dots li button{
+    height: 6px; width: 6px;
+    background-color: rgb(146, 146, 146);
+    border-radius: 100%;
+    display: inline-block;
+    border:none;
+    font-size:0;
+    padding:0;
+}
+.slide .slick-dots li.slick-active button{
+    background-color: rgb(255, 255, 255);
+}
