@@ -23,7 +23,7 @@ function init(){
     //  slide_video
     let data;
     $.ajax({
-        url:'./js/data.json',
+        url:'js/data.json',
         success:function(data){
             
             let elData = '';
