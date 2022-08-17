@@ -1,32 +1,32 @@
 {
     "video":[
         {
-            "url":"../img/park.mp4",
+            "url":"img/park.mp4",
             "tit":"Interview I Park Chan-wook, Director",
             "ja":"Film / Drama"
         },
         {
-            "url":"../img/latt_main.mp4",
+            "url":"img/latt_main.mp4",
             "tit":"LATT 22SS CAMPAIGN I LATT UNIVERSE",
             "ja":"Film / Drama"
         },
         {
-            "url":"../img/PUBG_Esports_main_low2.mp4",
+            "url":"img/PUBG_Esports_main_low2.mp4",
             "tit":"PUBG ESPORTS I Battle Ground",
             "ja":"Film / Drama"
         },
         {
-            "url":"../img/kakao_main_low.mp4",
+            "url":"img/kakao_main_low.mp4",
             "tit":"if(kakao) 2021",
             "ja":"Film / Drama"
         },
         {
-            "url":"../img/Disney_main_low.mp4",
+            "url":"img/Disney_main_low.mp4",
             "tit":"Disney+ launching Show",
             "ja":"Film / Drama"
         },
         {
-            "url":"../img/makingfilm_main_low.mp4",
+            "url":"img/makingfilm_main_low.mp4",
             "tit":"VA Studio Making Film",
             "ja":"Film / Drama"
         }
