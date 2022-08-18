@@ -11,11 +11,12 @@ function init(){
     
         if(headH < scrollTop){
             $('header').addClass('active');
-            $('header h1 > img').attr('src',"./img/logo-vac-nav-bk.png");
+            $('header h1 > img').attr('src',"img/logo-vac-nav-bk.png");
         }
         else if(scrollT){
-            $('header h1 > img').attr('src',"./img/logo-vac-nav.png");
+            $('header h1 > img').attr('src',"img/logo-vac-nav.png");
             $('header').removeClass('active');
+            
         }
         
     });
@@ -71,7 +72,7 @@ function init(){
             $('.s2-c2 a').addClass('active');
             $('.s2-c2 p').addClass('active');
         }if( C3-500 < scrollTop){
-            $('.s3-bg').addClass('active');
+            $('.s3-bg img,p,b').addClass('active');
         }if( C4-500 < scrollTop){
             $('.s4-c1 > ul a').addClass('active');
         }if( C5-500 < scrollTop){
@@ -85,7 +86,7 @@ function init(){
 
         $('.menu').addClass('active')
         $('header').addClass('active')
-        $('header h1 > img').attr('src',"./img/logo-vac-nav-bk.png");
+        $('header h1 > img').attr('src',"img/logo-vac-nav-bk.png");
     })
 }
 

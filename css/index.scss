@@ -438,6 +438,14 @@ main .section2{
     }
 }
 
+@keyframes good {
+    0%{
+        transform: translateY(200%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
 // section3
 main .section3{
     margin-top: 5%;
@@ -451,12 +459,14 @@ main .section3{
         color: #fff;
         position: absolute;
         left: 0; top: 0;
-        &.active{
-            animation: shine 1s forwards;
-        }
         div{
             padding-left: 5%;
+            overflow: hidden;
             b{
+                transform: translateY(120%);
+                &.active{
+                    animation: good 1.5s forwards;
+                }
                 font-size: 1.9rem;
                 font-weight: 1000;
                 white-space: pre-line;
@@ -475,7 +485,12 @@ main .section3{
                 padding: 0 6%;
                 text-align: left;
                 margin-bottom: 5%;
+                overflow: hidden;
                 img{
+                    transform: translateY(120%);
+                    &.active{
+                        animation: good 1.5s forwards;
+                    }
                     width: 100%;
                     margin-bottom: 1.3rem;
                 }
@@ -484,6 +499,10 @@ main .section3{
                     color: rgb(204, 204, 204);
                     margin-bottom: 1.3rem;
                     overflow-wrap: break-word;
+                    transform: translateY(120%);
+                    &.active{
+                        animation: good 1.5s forwards;
+                    }
                 }
             }
         }
