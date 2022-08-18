@@ -84,8 +84,8 @@ function init(){
     //  burger menu
     $('header .burger span').on('click',function(){
 
-        $('.menu').addClass('active')
-        $('header').addClass('active')
+        $('.menu').toggle('active')
+        $('header').toggel('active')
         $('header h1 > img').attr('src',"img/logo-vac-nav-bk.png");
     })
 }
